@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "independence demo application",
   "main": "index.html",
-  "dependencies": {
+  "dependencies": {  
+  },
+  "devDependencies": {
     "lite-server": "^2.2.2"
   },
-  "devDependencies": {},
   "scripts": {    
     "dev": "lite-server"
   },
