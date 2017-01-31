@@ -26,6 +26,7 @@ function config($translateProvider) {
             ANIMATIONS: 'Animations',
             LANDING: 'Landing page',
             LAYOUTS: 'Layouts',
+            HACCP: 'Haccp Plan',
 
             // Define some custom text
             WELCOME: 'Welcome Amelia',

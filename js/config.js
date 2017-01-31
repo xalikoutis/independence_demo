@@ -21,6 +21,11 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
 
     $stateProvider
 
+        .state('haccp', {
+            url: "/haccp",
+            templateUrl: "views/layouts.html",
+            data: { pageTitle: 'Haccp Plan' },
+        })
         .state('dashboards', {
             abstract: true,
             url: "/dashboards",
