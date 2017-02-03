@@ -8,7 +8,7 @@
                     <a uib-dropdown-toggle href>
                             <span class="clear">
                                 <span class="block m-t-xs">
-                                    <strong class="font-bold">David Williams</strong>
+                                    <strong class="font-bold">John Papas</strong>
                              </span>
                                 <span class="text-muted text-xs block">Administrator <b class="caret"></b></span>
                             </span>
@@ -25,9 +25,30 @@
                     IN+
                 </div>
             </li>
-            <li ui-sref-active="active">
-                <a ui-sref="haccp"><i class="fa fa-diamond"></i> <span class="nav-label">{{ 'HACCP' | translate }}</span> </a>
+            <li ng-class="{active: $state.includes('haccp')}">
+                <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">{{ 'HACCP' | translate }}</span> <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('dashboards')}">
+                    <li ui-sref-active="active"><a ui-sref="dashboards.dashboard_1">{{ 'HACCPPLANNING' | translate }}</a></li>
+                    <li ui-sref-active="active"><a ui-sref="dashboards.dashboard_2">{{ 'HAZARDS' | translate }}</a></li>                    
+                </ul>
             </li>
+            <li ng-class="{active: $state.includes('monitoring')}">
+                <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">{{ 'INSPECTIONS' | translate }}</span> <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('dashboards')}">
+                    <li ui-sref-active="active"><a ui-sref="dashboards.dashboard_1">{{ 'MONITORING' | translate }}</a></li>
+                    <li ui-sref-active="active"><a ui-sref="dashboards.dashboard_2">{{ 'RECEIVING' | translate }}</a></li>
+                    <li ui-sref-active="active"><a ui-sref="dashboards.dashboard_2">{{ 'BATCHING' | translate }}</a></li>                 
+                </ul>
+            </li>
+            <li ng-class="{active: $state.includes('monitoring')}">
+                <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">{{ 'CONTROL' | translate }}</span> <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('dashboards')}">
+                    <li ui-sref-active="active"><a ui-sref="dashboards.dashboard_1">{{ 'CLEANING' | translate }}</a></li>
+                    <li ui-sref-active="active"><a ui-sref="dashboards.dashboard_2">{{ 'CALIBRATION' | translate }}</a></li>
+                    <li ui-sref-active="active"><a ui-sref="dashboards.dashboard_2">{{ 'MAINTENACE' | translate }}</a></li>
+                    <li ui-sref-active="active"><a ui-sref="dashboards.dashboard_2">{{ 'TRACEABILITY' | translate }}</a></li>                 
+                </ul>
+            </li>     
             <li ng-class="{active: $state.includes('dashboards')}">
                 <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">{{ 'DASHBOARD' | translate }}</span> <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('dashboards')}">

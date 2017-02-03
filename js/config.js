@@ -23,8 +23,38 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
 
         .state('haccp', {
             url: "/haccp",
-            templateUrl: "views/layouts.html",
-            data: { pageTitle: 'Haccp Plan' },
+            abstract: true,
+            templateUrl: "views/common/content.html"            
+        })
+        .state('haccp.haccp_planning', {
+            url: "/haccp_planning",            
+            templateUrl: "views/common/content.html",
+            data: { pageTitle: 'Haccp Planning' },
+        })
+        .state('haccp.hazards', {
+            url: "/hazards",            
+            templateUrl: "views/common/content.html",
+            data: { pageTitle: 'Hazards' },
+        })
+        .state('monitoring', {
+            url: "/monitor",
+            abstract: true,
+            templateUrl: "views/common/content.html"            
+        })
+        .state('monitor.monitoring', {
+            url: "/monitoring",            
+            templateUrl: "views/common/content.html",
+            data: { pageTitle: 'Monitoring' },
+        })
+        .state('monitor.receiving', {
+            url: "/receiving",            
+            templateUrl: "views/common/content.html",
+            data: { pageTitle: 'Receiving' },
+        })
+        .state('monitor.batching', {
+            url: "/batching",            
+            templateUrl: "views/common/content.html",
+            data: { pageTitle: 'Batching' },
         })
         .state('dashboards', {
             abstract: true,
